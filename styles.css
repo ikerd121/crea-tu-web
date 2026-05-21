@@ -1103,7 +1103,13 @@ body {
   .services-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: repeat(2, 1fr); }
   .tech-grid { grid-template-columns: repeat(2, 1fr); }
-  .mant-card { padding: 32px 24px; }
+  .mant-card { padding: 32px 20px; }
+  /* Evitar que el texto de la lista desborde el contenedor flex */
+  .mant-list li > div { min-width: 0; overflow-wrap: break-word; }
+  /* Precio: permitir salto de línea y reducir tamaño para que no desborde */
+  .mant-price { flex-wrap: wrap; row-gap: 0; }
+  .mant-price-num { font-size: 2.4rem; }
+  .mant-price-card { padding: 28px 20px; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .nav-links.open {
@@ -1145,9 +1151,9 @@ body {
   .hero-actions .btn { justify-content: center; }
   .service-card { padding: 24px 20px; }
   .tech-card { padding: 20px 14px; }
-  .mant-card { padding: 24px 16px; }
-  .mant-price-card { padding: 28px 20px; }
-  .mant-price-num { font-size: 2.8rem; }
+  .mant-card { padding: 24px 14px; }
+  .mant-price-card { padding: 24px 16px; }
+  .mant-price-num { font-size: 2.2rem; }
   .payment-number { font-size: 2.8rem; }
   .payment-step { padding: 24px 20px; }
 }
