@@ -1118,4 +1118,10 @@ body {
   .hero-stats { gap: 20px; }
   .stat-divider { display: none; }
   .footer-content { flex-direction: column; }
+
+  /* Pago - apilar verticalmente en móvil */
+  .payment-grid { flex-direction: column; gap: 16px; }
+  .payment-step { max-width: 100%; width: 100%; padding: 28px 24px; }
+  .payment-arrow { transform: rotate(90deg); }
+  .payment-badges { flex-direction: column; align-items: center; }
 }
