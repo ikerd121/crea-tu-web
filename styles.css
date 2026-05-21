@@ -216,6 +216,8 @@ body {
   transition: all 0.3s;
 }
 
+.nav-cta-mobile { display: none; }
+
 /* ============================================
    HERO
    ============================================ */
@@ -1096,9 +1098,18 @@ body {
 
 @media (max-width: 768px) {
   .section { padding: 72px 0; }
+  .section-header { margin-bottom: 40px; }
+  .hero { padding: 100px 0 60px; }
   .services-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: repeat(2, 1fr); }
-  .tech-grid { grid-template-columns: repeat(4, 1fr); }
+  .tech-grid { grid-template-columns: repeat(2, 1fr); }
+  .mant-card { padding: 28px 16px; overflow: hidden; }
+  /* Texto de la lista: el div flex-hijo necesita min-width:0 para envolver */
+  .mant-list li > div { min-width: 0; overflow-wrap: break-word; word-break: break-word; }
+  /* Precio: apilar verticalmente para que nunca desborde */
+  .mant-price { flex-direction: column; align-items: center; gap: 2px; }
+  .mant-price-num { font-size: 2.8rem; }
+  .mant-price-card { padding: 24px 16px; max-width: 100%; width: 100%; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .nav-links.open {
@@ -1113,7 +1124,11 @@ body {
     gap: 4px;
     z-index: 999;
   }
+  .nav-links.open li a { display: block; padding: 12px 16px; font-size: 1rem; }
   .nav-links.open + .nav-cta { display: none; }
+  .nav-links.open .nav-cta-mobile { display: block; margin-top: 8px; }
+  .nav-links.open .nav-cta-mobile a { display: flex; width: 100%; justify-content: center; }
+  .hero-subtitle br { display: none; }
   .form-row { grid-template-columns: 1fr; }
   .hero-stats { gap: 20px; }
   .stat-divider { display: none; }
@@ -1124,4 +1139,21 @@ body {
   .payment-step { max-width: 100%; width: 100%; padding: 28px 24px; }
   .payment-arrow { transform: rotate(90deg); }
   .payment-badges { flex-direction: column; align-items: center; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .section { padding: 56px 0; }
+  .section-header { margin-bottom: 28px; }
+  .hero { padding: 88px 0 48px; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { justify-content: center; }
+  .service-card { padding: 24px 20px; }
+  .tech-card { padding: 20px 14px; }
+  .mant-card { padding: 20px 12px; }
+  .mant-price-card { padding: 20px 14px; }
+  .mant-price-num { font-size: 2.5rem; }
+  .payment-number { font-size: 2.8rem; }
+  .payment-step { padding: 24px 20px; }
 }
