@@ -802,6 +802,138 @@ body {
 }
 
 /* ============================================
+   MANTENIMIENTO
+   ============================================ */
+.mant-card {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 64px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 56px;
+}
+
+.mant-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.mant-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.mant-desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.mant-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.mant-list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.mant-check {
+  width: 22px; height: 22px;
+  background: rgba(16,185,129,0.15);
+  color: var(--green);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.mant-list strong { display: block; font-size: 0.9rem; margin-bottom: 2px; }
+.mant-list p { font-size: 0.82rem; color: var(--muted); }
+
+.mant-price-card {
+  background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(236,72,153,0.08));
+  border: 1px solid rgba(124,58,237,0.25);
+  border-radius: 20px;
+  padding: 36px 32px;
+  text-align: center;
+}
+
+.mant-price-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.mant-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.mant-price-from { font-size: 0.9rem; color: var(--muted); }
+.mant-price-num  { font-size: 3.5rem; font-weight: 900; line-height: 1; }
+.mant-price-period { font-size: 1rem; color: var(--muted); }
+
+.mant-price-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.mant-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin-bottom: 24px;
+}
+
+.mant-included {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.mant-included li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.mant-included li span {
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* ============================================
    TECNOLOGÍAS
    ============================================ */
 .tech-grid {
@@ -907,6 +1039,8 @@ body {
   .steps-grid { grid-template-columns: repeat(2, 1fr); }
   .steps-grid::before { display: none; }
   .tech-grid { grid-template-columns: repeat(4, 1fr); }
+  .mant-card { grid-template-columns: 1fr; gap: 40px; padding: 40px 32px; }
+  .mant-price-card { max-width: 380px; margin: 0 auto; width: 100%; }
 }
 
 @media (max-width: 768px) {
