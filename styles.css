@@ -723,6 +723,85 @@ body {
 }
 
 /* ============================================
+   CONTRATACIÓN / PAGO
+   ============================================ */
+.payment-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.payment-step {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px 48px;
+  text-align: center;
+  flex: 1;
+  max-width: 340px;
+  transition: all 0.3s ease;
+}
+
+.payment-step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(124,58,237,0.3);
+}
+
+.payment-number {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.payment-step h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.payment-step p {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.payment-arrow {
+  font-size: 2rem;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.payment-methods {
+  text-align: center;
+}
+
+.payment-methods-title {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.payment-badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pay-badge {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ============================================
    TECNOLOGÍAS
    ============================================ */
 .tech-grid {
