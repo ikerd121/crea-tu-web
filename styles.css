@@ -988,6 +988,57 @@ body {
 }
 
 /* ============================================
+   COOKIE BANNER
+   ============================================ */
+.cookie-banner {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: calc(100% - 48px);
+  max-width: 760px;
+  background: #1a1a2e;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  display: none;
+  animation: slideUp 0.4s ease;
+}
+
+.cookie-banner.visible { display: block; }
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.cookie-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cookie-content p {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--muted);
+  min-width: 200px;
+}
+
+.cookie-content a { color: #A78BFA; text-decoration: underline; }
+
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cookie-actions .btn { padding: 10px 20px; font-size: 0.875rem; }
+
+/* ============================================
    FOOTER
    ============================================ */
 .footer { border-top: 1px solid var(--border); padding: 48px 0 24px; }

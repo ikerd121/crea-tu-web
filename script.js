@@ -85,6 +85,25 @@ function shakeInvalid() {
   });
 }
 
+// Cookie banner
+const cookieBanner  = document.getElementById('cookieBanner');
+const cookieAccept  = document.getElementById('cookieAccept');
+const cookieReject  = document.getElementById('cookieReject');
+
+if (!localStorage.getItem('cookieChoice')) {
+  setTimeout(() => cookieBanner.classList.add('visible'), 1000);
+}
+
+cookieAccept.addEventListener('click', () => {
+  localStorage.setItem('cookieChoice', 'accepted');
+  cookieBanner.classList.remove('visible');
+});
+
+cookieReject.addEventListener('click', () => {
+  localStorage.setItem('cookieChoice', 'rejected');
+  cookieBanner.classList.remove('visible');
+});
+
 const style = document.createElement('style');
 style.textContent = `@keyframes shake {
   0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)}
