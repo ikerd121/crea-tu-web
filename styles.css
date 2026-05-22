@@ -658,6 +658,92 @@ body {
 .form-success p { font-size: 0.875rem; color: var(--muted); }
 
 /* ============================================
+   PORTFOLIO
+   ============================================ */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.portfolio-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(124,58,237,0.3);
+}
+
+.portfolio-preview {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #0D1117;
+}
+
+.portfolio-browser {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #161B22;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+
+.browser-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+}
+
+.browser-url {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-left: 6px;
+  font-family: monospace;
+}
+
+.portfolio-browser iframe {
+  width: 200%;
+  height: 200%;
+  border: none;
+  transform: scale(0.5);
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+.portfolio-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px 16px;
+}
+
+.portfolio-emoji { font-size: 1.8rem; flex-shrink: 0; }
+.portfolio-info h3 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+.portfolio-info p  { font-size: 0.82rem; color: var(--muted); }
+
+.portfolio-btn {
+  margin: 0 24px 24px;
+  justify-content: center;
+}
+
+/* ============================================
    CÓMO TRABAJO
    ============================================ */
 .steps-grid {
@@ -1086,6 +1172,7 @@ body {
    ============================================ */
 @media (max-width: 1024px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: 1fr; gap: 48px; }
   .floating-tags { display: none; }
   .contact-wrapper { grid-template-columns: 1fr; }
@@ -1101,6 +1188,7 @@ body {
   .section-header { margin-bottom: 40px; }
   .hero { padding: 100px 0 60px; }
   .services-grid { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: repeat(2, 1fr); }
   .tech-grid { grid-template-columns: repeat(2, 1fr); }
   .mant-card { padding: 28px 16px; overflow: hidden; }
