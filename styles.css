@@ -195,7 +195,7 @@ body {
 }
 .nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.06); }
 
-.nav-cta { margin-left: 8px; }
+.nav-cta { margin-left: 8px; padding: 10px 20px; font-size: 0.85rem; }
 
 .hamburger {
   display: none;
