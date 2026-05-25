@@ -607,6 +607,14 @@ body {
 .avail-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 2s ease-in-out infinite; }
 
 /* Form */
+.contact-form-box {
+  background: var(--card);
+  border: 1px solid rgba(124,58,237,0.25);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 60px rgba(124,58,237,0.08);
+}
+
 .contact-form { display: flex; flex-direction: column; gap: 20px; }
 
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
